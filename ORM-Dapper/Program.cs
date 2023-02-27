@@ -37,16 +37,18 @@ namespace ORM_Dapper
 
             //myProductRepository.CreateProduct("Js New Product", 77.77, 9);
 
-            var myProductToUpdate = myProductRepository.GetProductById(942); //We creaeted a new product in SQL Workbench directly with product ID = 942
+            //var myProductToUpdate = myProductRepository.GetProductById(942); //We creaeted a new product in SQL Workbench directly with product ID = 942
 
-            //What we want to change with product (Below)
-            myProductToUpdate.Name = "UPDATE TEST";
-            myProductToUpdate.Price = 99.99;
-            myProductToUpdate.CategoryID = 1;
-            myProductToUpdate.OnSale = false;
-            myProductToUpdate.StockLevel = 99;
+            ////What we want to change with product (Below)
+            //myProductToUpdate.Name = "UPDATE TEST";
+            //myProductToUpdate.Price = 99.99;
+            //myProductToUpdate.CategoryID = 1;
+            //myProductToUpdate.OnSale = false;
+            //myProductToUpdate.StockLevel = 99;
 
-            myProductRepository.UpdateProduct(myProductToUpdate);
+            //myProductRepository.UpdateProduct(myProductToUpdate);
+
+            myProductRepository.DeleteProduct(940);
 
             var products = myProductRepository.GetAllProducts();
 
